@@ -12,7 +12,7 @@ const Chains = () => {
 
     const vendorFirmHandler = async()=>{
             try {
-                    const response = await fetch(`${API_URL}/vendor/all-vendors?order=desc`)
+                    const response = await fetch(`${API_URL}/vendor/all-vendors`)
                     const newData = await response.json()
                         setVendorData(newData);
                         console.log("this is api Data ", newData)
@@ -75,7 +75,7 @@ const handleScroll =(direction)=>{
         <FaRegArrowAltCircleRight className='btnIcons'/>
         </button>
       </div>
-            <h3 className='chainTitle'>Top restaurant chains in Hyderabad</h3>
+            <h3 className='chainTitle'>Top restaurant chains in Bangalore</h3>
         <section className="chainSection" id="chainGallery" onScroll={(e)=>setScrollPosition(e.target.scrollf)}>
             {vendorData.vendors && vendorData.vendors.map((vendor)=>{
                    return(
